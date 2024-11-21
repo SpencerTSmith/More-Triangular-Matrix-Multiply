@@ -45,10 +45,10 @@ SHELL:=/bin/bash
 
 
 clean:
-	rm -f *.x *~ *.o
+	rm -f *.x *~ ./src/*.o
 
 cleanall: clean
-	rm -f *.csv *.png
+	rm -f ./data/*.csv ./data/*.png
 
 
 all-schooner: build-verifier-schooner  build-bench-schooner 
