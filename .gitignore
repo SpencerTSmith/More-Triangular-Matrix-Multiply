@@ -1,5 +1,4 @@
 *.x
 *.csv
-*.png
 *.o
 .venv
