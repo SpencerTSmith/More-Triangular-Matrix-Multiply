@@ -25,8 +25,8 @@
 # higher performance numbers)
 MIN=64
 #MAX=8192 # good large number
-MAX=4096 # medium size
-#MAX=1024 # small devel size
+# MAX=4096 # medium size
+MAX=1024 # small devel size
 STEP=64
 
 
@@ -80,7 +80,7 @@ run-bench-local: build-bench-local
 	mpiexec -n ${NUMRANKS} ./run_bench_op_var01.x ${MIN} ${MAX} ${STEP} 1 1  ./data/result_bench_local_op_var01_k${KMEDIUM}.csv
 	cat ./data/result_bench_local_op_var01_k${KMEDIUM}.csv
 	mpiexec -n ${NUMRANKS} ./run_bench_op_var02.x ${MIN} ${MAX} ${STEP} 1 1  ./data/result_bench_local_op_var02_k${KMEDIUM}.csv
-	cat result_bench_local_op_var02_k${KMEDIUM}.csv
+	cat ./data/result_bench_local_op_var02_k${KMEDIUM}.csv
 	mpiexec -n ${NUMRANKS} ./run_bench_op_var03.x ${MIN} ${MAX} ${STEP} 1 1  ./data/result_bench_local_op_var03_k${KMEDIUM}.csv
 	cat ./data/result_bench_local_op_var03_k${KMEDIUM}.csv
 
